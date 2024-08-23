@@ -25,7 +25,8 @@ const Search = () => {
   }
 
   return (
-    <div className="bg-[#f5f5f3] hidden">
+    <>
+    <div className="bg-[#f5f5f3] hidden md:block">
         <Container className="flex justify-between items-center py-6">
             <div className="flex gap-x-3 items-center">
                 <span><img src={Cata} alt="" /></span>
@@ -54,6 +55,7 @@ const Search = () => {
             </div>
         </Container>
     </div>
+    </>
   )
 }
 
