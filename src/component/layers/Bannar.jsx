@@ -47,7 +47,7 @@ const Bannar = () => {
   };
   return (
     <>
-    <Slider {...settings} className='cursor-pointer'>
+    <Slider {...settings} className='cursor-pointer hidden'>
       <div>
           <img className="w-full" src={bannar01} alt="" />
       </div>
