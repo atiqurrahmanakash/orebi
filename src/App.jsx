@@ -19,6 +19,7 @@ import Error from './component/pages/Error';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Root />}>
+      <Route path='/' element={<Home />}/>
       <Route path='/home' element={<Home />}></Route>
       <Route path='/services' element={<Services />}></Route>
       <Route path='/faq' element={<Faq />}></Route>

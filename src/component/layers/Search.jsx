@@ -86,7 +86,7 @@ const Search = () => {
         <Container className="flex justify-between items-center py-6 relative">
             {
               active ? 
-              <div className="megamenu  absolute h-[340px] top-[102px] z-10 flex ">
+              <div className="megamenu  absolute h-[343px] top-[102px] z-10 flex ">
                 <ul className="w-[263px] bg-[#262626] text-white">
                   <li onMouseEnter={Accesoriesfn} onMouseLeave={Accesoriesfn2} className='pl-[21px] py-3 border-b border-[#2D2D2D] hover:pl-[31px] group cursor-pointer'><a className='font-normal text-sm text-white/[0.7] font-dm group-hover:font-bold group-hover:text-sm group-hover:text-[#fff]' href="#">Accesories</a></li>
                   <li onMouseEnter={furniturefn} onMouseLeave={furniturefn2} className='pl-[21px] py-3 border-b border-[#2D2D2D] hover:pl-[31px] group cursor-pointer'><a className='font-normal text-sm text-white/[0.7] font-dm group-hover:font-bold group-hover:text-sm group-hover:text-[#fff]' href="#">Furniture</a></li>
