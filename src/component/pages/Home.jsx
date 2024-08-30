@@ -45,7 +45,7 @@ const Home = () => {
       tag: "10",
       color: "black",
       best: true,
-      special: false,
+      special: true,
     },
     {
       id: 2,
@@ -55,7 +55,7 @@ const Home = () => {
       tag: "10",
       color: "black",
       best: true,
-      special: false,
+      special: true,
     },
     {
       id: 3,
@@ -64,8 +64,8 @@ const Home = () => {
       price: 30,
       tag: "10",
       color: "black",
-      best: false,
-      special: false,
+      best: true,
+      special: true,
     },
     {
       id: 4,
@@ -74,7 +74,37 @@ const Home = () => {
       price: 35,
       tag: "",
       color: "black",
-      best: false,
+      best: true,
+      special: true,
+    },
+    {
+      id: 5,
+      title: "pookie",
+      image: pookie,
+      price: 30,
+      tag: "20",
+      color: "off White",
+      best: true,
+      special: true,
+    },
+    {
+      id: 6,
+      title: "Boy watch2",
+      image:Watch,
+      price: 20,
+      tag: "10",
+      color: "Black",
+      best: true,
+      special: true,
+    },
+    {
+      id: 7,
+      title: "Haman",
+      image:Haman,
+      price: 40,
+      tag: "",
+      color: "White",
+      best: true,
       special: true,
     },
     {
@@ -82,10 +112,10 @@ const Home = () => {
       title: "Office Bag",
       image: OfficeBag,
       price: 39,
-      tag: "20",
-      color: "black",
+      tag: "10",
+      color: "off black",
       best: true,
-      special: false,
+      special: true,
     },
     {
       id: 7,
@@ -95,49 +125,88 @@ const Home = () => {
       tag: "10",
       color: "black",
       best: true,
-      special: false,
+      special: true,
     },
     {
       id: 8,
       title: "Boy watch",
       image: Watch,
-      price: 35,
+      price: 30,
       tag: '',
       color: "black",
-      best: false,
+      best: true,
       special: true,
     },
     {
       id: 9,
-      title: "Haman",
+      title: "New Haman",
       image: Haman,
-      price: 20,
-      tag: "",
+      price: 21,
+      tag: "10",
       color: "",
-      best: false,
+      best: true,
       special: true,
     },
     {
-      id: 9,
+      id: 10,
       title: "Schoolbag",
       image: Schoolbag,
       price: 25,
       tag: "10",
       color: "black",
-      best: false,
-      special: false,
+      best: true,
+      special: true,
     },
     {
-      id: 10,
+      id: 11,
       title: "Sunglass",
       image: Sunglass,
       price: 30,
       tag: "10",
       color: "Black",
-      best: false,
+      best: true,
       special: true,
     },
+    {
+      id: 12,
+      title: "Pookie",
+      image: pookie,
+      price: 20,
+      tag: "30",
+      color: "off white",
+      best: true,
+      special: true,
+    },
+    {
+      id: 13,
+      title: "Water Bottle2",
+      image:bottle ,
+      price: 300,
+      tag: "",
+      color: "white",
+      best: true,
+      special: true,
+    },
+
   ]
+  const add = [
+    {
+      id: 1,
+      add: Add1,
+      status:true,
+    },
+    {
+      id: 2,
+      add: Add2,
+      status:true,
+    },
+    {
+      id: 3,
+      add: Add3,
+      status:true,
+    },
+  ]
+  add.reverse();
   products.reverse();
   useEffect(
     () => {
@@ -228,15 +297,15 @@ const Home = () => {
       </div>
       <Container>
         <div className="gallery mt-[174px] grid grid-cols-2 grid-rows-2 gap-[40px] cursor-pointer">
-            <div className="row-span-2 bg-red-300">
-              <img src={gladd1} alt="" />
-            </div>
-            <div className="">
-              <img src={gladd2} alt="" />
-            </div>
-            <div className="">
-              <img src={gladd3} alt="" />
-            </div>
+          <div className="row-span-2">
+            <img src={gladd1} alt="" />
+          </div>
+          <div className="">
+            <img src={gladd2} alt="" />
+          </div>
+          <div className="">
+            <img src={gladd3} alt="" />
+          </div>
         </div>
 
         <div className="arrivals mt-[128px]">
@@ -254,7 +323,6 @@ const Home = () => {
                         productTag={item.tag}
                         productColor={item.color}
                       /> : null
-
                   ))
                 }
               </Slider>
@@ -283,10 +351,13 @@ const Home = () => {
         </div>
         <div className="newslatter h-[370px] w-full mb-[128px] cursor-pointer">
           <Slider {...settings3}>
-            <img className="h-full w-full" src={Add1} alt="" />
-            <img className="h-full w-full" src={Add2} alt="" />
-            <img className="h-full w-full" src={Add3} alt="" />
-            <img className="h-full w-full" src={Add4} alt="" />
+            {
+              add?.map((item) => (
+                item.status ? 
+                <img className="h-full w-full" src={item.add} alt="" />
+                : null
+              ))
+            }
           </Slider>
         </div>
         <div className="special_offer">
